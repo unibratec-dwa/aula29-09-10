@@ -1,0 +1,17 @@
+CACHE MANIFEST
+#Versão 23.0
+
+CACHE: 
+/
+index.html
+contato.html
+imagens/twitter2.png
+
+NETWORK:
+
+
+FALLBACK:
+avatar/ imagens/avatarOffline.jpg
+
+
+

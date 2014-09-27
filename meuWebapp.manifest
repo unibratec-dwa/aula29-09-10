@@ -1,0 +1,13 @@
+CACHE MANIFEST
+#Versão 0.11
+
+CACHE:
+bibliotecas/js/jquery.js
+codigoFonte/js/destaquesDoMes.js
+
+NETWORK:
+avatar/
+
+FALLBACK:
+destaquesDoMes.php destaquesOffline.html
+webcam/aovivo.jpg webcam/offline.gif

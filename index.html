@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.manifest">
+<head>
+	<meta charset="UTF-8">
+	<title>Meu WebApp</title>
+	<script>
+
+	window.addEventListener("load", function() {
+
+		
+
+		applicationCache.addEventListener("updateready", function() {
+			console.log(applicationCache.status, "Existe uma nova versão do aplicativo. Por favor reinicie.");
+
+			if(applicationCache.status == applicationCache.UPDATEREADY) {
+				if(confirm("Existe uma nova versão. Atualizar?")) {
+					applicationCache.swapCache();
+					window.location.reload();
+				}
+			}
+
+		}, true);
+
+
+	}, true);
+
+	</script>
+</head>
+<style>
+	#avatares img {
+		display: inline-block;
+		width: 200px;
+		height: auto;/
+	}
+</style>
+<body>
+	
+<h1>Meu Aplicativo</h1>
+
+<!--
+
+<ul>
+	<li>
+		<a href="index.html">Home</a>
+	</li>
+	<li>
+		<a href="contato.html">Contato</a>
+	</li>
+</ul>
+ 
+
+<div id="avatares">
+	<img src="avatar/daniel.jpg" alt="" class="avatar">
+	<img src="avatar/gustavo.jpg" alt="" class="avatar">
+	<img src="avatar/paulo.jpg" alt="" class="avatar">
+</div>
+ -->
+
+</body>
+</html>

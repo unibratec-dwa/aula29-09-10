@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Meu WebApp</title>
+	<script>
+
+	window.addEventListener("load", function(){
+		window.applicationCache.addEventListener("updateready", function(){
+
+				var texto = "Existe uma atualização disponível. \nVocê deseja utilizá-la agora? \nO aplicativo será reiniciado.";
+
+				var resposta = confirm(texto);
+
+				if(resposta == true) {
+
+					window.applicationCache.swapCache();
+					window.location.reload();
+
+				}
+
+		}, true);
+	}, true)
+
+	</script>
+
+
+<style>
+	#funcionarios img {
+		display: inline-block;
+		width: 200px;
+		height: auto;/
+	}
+</style>
+</head>
+<body>
+
+	<div id="webapp">
+		<header>
+			<h1>Meu WebAPP</h1>
+			<nav>
+				<ul>
+					<li><a href="webapp.html">Home</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<div id="conteudo">
+			<h2>Home</h2>
+			<p>Seja bem vindo ao meu web app!</p>
+
+			<div id="destaquesDoMes">
+				
+				<h3>Destaques do mês</h3>
+				
+				<div id="funcionarios">
+					Dados não carregados.
+				</div>
+
+				<h3>Vista da nossa janela</h3>
+				<img src="webcam/aovivo.jpg" alt="">
+			</div>
+		</div>
+
+		<footer>
+			Entre em contato conosco pelo email: webapp@empresa.com
+		</footer>
+	</div>
+
+	<script src="bibliotecas/js/jquery.js"></script>
+	<script src="codigoFonte/js/destaquesDoMes.js"></script>
+</body>
+</html>
